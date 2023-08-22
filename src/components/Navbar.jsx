@@ -6,7 +6,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleToggle = (isOpen) => {
+  const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
@@ -15,7 +15,7 @@ const Navbar = () => {
       <header className="padding-x py-8 absolute z-10 w-full">
         <nav className="flex justify-between items-center max-container">
           <a href="/">
-            <img src={headerLogo} alt="Logo" width={130} height={29} />
+            <img src={headerLogo} alt="Logo" width={130} height={29} className="max-sm:w-24 max-sm:-ml-3" />
           </a>
           <ul className="flex-1 flex justify-center items-center max-lg:hidden">
             {navLinks.map((items) => (
@@ -44,7 +44,7 @@ const Navbar = () => {
         </nav>
       </header>
       {isOpen && ( //this is for mobile view
-        <ul className="flex flex-1 flex-col justify-center items-center lg:hidden flex-wrap absolute w-full mx-16">
+        <ul className="flex flex-1 flex-col justify-center items-center lg:hidden flex-wrap absolute w-full mx-16 my-6 max-sm:mx-7">
           {navLinks.map((items) => (
             <li key={items.label} className="mx-4 z-10">
               <a
