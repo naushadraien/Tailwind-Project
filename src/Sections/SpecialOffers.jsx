@@ -4,7 +4,7 @@ import Button from "../components/Button";
 
 const SpecialOffers = () => {
   return (
-    <section className="flex flex-wrap items-center max-xl:flex-col-reverse gap-10 max-container">
+    <section className="flex flex-wrap items-center max-xl:flex-col-reverse gap-10 max-container dark:text-slate-200">
       <div className="flex-1 ">
         <img
           src={offer}
@@ -18,12 +18,12 @@ const SpecialOffers = () => {
         <h2 className="font-palanquin text-4xl capitalize font-bold lg:max-w-lg">
           <span className="text-coral-red">Special</span> Offers
         </h2>
-        <p className="mt-4 lg:max-w-lg info-text ">
+        <p className="mt-4 lg:max-w-lg info-text dark:text-slate-300">
           Embark on a shopping journey that redefines your experience with
           unbeatable deals. From premier selections to incredible savings, we
           offer unparalleled value that sets us apart.
         </p>
-        <p className="mt-6 lg:max-w-lg info-text ">
+        <p className="mt-6 lg:max-w-lg info-text dark:text-slate-300">
           Navigate a realm of possibilities designed to fulfill your unique
           desires, surpassing the loftiest expectations. Your journey with us is
           nothing short of exceptional.

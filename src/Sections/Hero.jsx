@@ -12,27 +12,27 @@ const Hero = () => {
       id="home"
       className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
     >
-      <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
+      <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-32 lg:dark:pt-40">
         <p className="text-xl font-montserrat text-coral-red ">
           Our Summer Collection
         </p>
-        <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold  ">
-          <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
+        <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold dark:text-slate-200">
+          <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10 dark:bg-black max-lg:dark:text-4xl">
             The New Arrivals
           </span>
           <br />
-          <span className="text-coral-red inline-block mt-3">Nike</span> Shoes
+          <span className="text-coral-red inline-block mt-3 text-[75px]">GoldStar</span> <span className="text-[70px]">Shoes</span>
         </h1>
-        <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">
-          Discover stylish Nike arrivals, quality comfort, and innovation for
+        <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm dark:text-slate-200">
+          Discover stylish GoldStar arrivals, quality comfort, and innovation for
           your active life.
         </p>
         <Button label="Shop Now" iconUrl={arrowRight} />
-        <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
+        <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16 dark:text-slate-200">
           {statistics.map((items) => (
             <div key={items.value}>
               <p className="text-4xl font-palanquin font-bold">{items.value}</p>
-              <p className="leading-7 font-montserrat text-slate-gray">
+              <p className="leading-7 font-montserrat text-slate-gray dark:text-slate-300">
                 {items.label}
               </p>
             </div>

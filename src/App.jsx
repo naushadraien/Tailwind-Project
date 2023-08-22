@@ -52,7 +52,7 @@ const App = () => {
   onWindowMatch(); //on load check for theme and set it accordingly
 
   useEffect(() => {
-    console.log("Theme switch effect triggered with:", themeSwitch);
+    // console.log("Theme switch effect triggered with:", themeSwitch);
     switch (themeSwitch) {
       case "dark":
         element.classList.add("dark");
@@ -77,16 +77,16 @@ const App = () => {
 
   return (
     <>
-      <main className="relative dark:text-slate-gray dark:bg-slate-900">
-        <section className="fixed top-5 right-36 dark:bg-slate-800 bg-gray-100 rounded-ful flex flex-1 z-40">
+      <main className="relative dark:text-slate-gray dark:bg-black  ">
+        <section className="absolute top-5 right-0 dark:right-1 dark:bg-slate-200 bg-slate-300 rounded-full flex flex-1 z-40 flex-col">
           {icons.map((items) => (
             <button
               className={`w-8 h-8 leading-9 text-xl flex justify-center items-center cursor-pointer m-1 ${
-                themeSwitch === items.text && "text-sky-300"
+                themeSwitch === items.text && "text-blue-400"
               }`}
               key={items.text}
               onClick={() => {
-                console.log("Switching theme to:", items.text);
+                // console.log("Switching theme to:", items.text);
                 setThemeSwitch(items.text);
               }}
             >
@@ -98,25 +98,25 @@ const App = () => {
         <section className="xl:padding-l wide:padding-r padding-b max-lg:pt-20">
           <Hero />
         </section>
-        <section className="padding">
+        <section className="padding dark:border dark:rounded-lg dark:border-slate-500">
           {" "}
           <PopularProducts />
         </section>
-        <section className="padding">
+        <section className="padding dark:bg-black dark:border dark:rounded-lg dark:border-slate-500">
           <SuperQuality />
         </section>
-        <section className="padding-x py-10">
+        <section className="padding-x py-10 dark:bg-black dark:border dark:rounded-lg dark:border-slate-500 ">
           <Services />
         </section>
-        <section className="padding">
+        <section className="padding dark:bg-black dark:border dark:rounded-lg dark:border-slate-500">
           {" "}
           <SpecialOffers />
         </section>
-        <section className="bg-pale-blue padding">
+        <section className="bg-pale-blue padding dark:bg-black dark:border dark:rounded-lg dark:border-slate-500">
           {" "}
           <CustomerReviews />
         </section>
-        <section className="padding-x sm:py-32 py-16 w-full">
+        <section className="padding-x sm:py-32 py-16 w-full dark:border dark:rounded-lg dark:border-slate-500">
           <Subscribe />
         </section>
         <section className="bg-black padding-x padding-t pb-8">
